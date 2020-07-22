@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/N2jvJ23UIjLqbfMVTTFnvNKpRkBAKXI4/kNDe/m61VI69bMGebBwasv95lDhuYkVEoFEkpidjxRgJtwC0dmhw==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\ekuru\\2007_13_dotnet\\project_challenges\\p0\\PizzaBox.Storing\\PizzaBox.Storing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ekuru\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ekuru\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

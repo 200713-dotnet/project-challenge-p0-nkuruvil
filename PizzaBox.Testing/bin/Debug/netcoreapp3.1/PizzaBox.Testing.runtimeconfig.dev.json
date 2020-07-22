@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ekuru\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ekuru\\.nuget\\packages"
+    ]
+  }
+}

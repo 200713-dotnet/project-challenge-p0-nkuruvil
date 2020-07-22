@@ -1,0 +1,13 @@
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.exe
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.deps.json
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.runtimeconfig.json
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.runtimeconfig.dev.json
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.dll
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\bin\Debug\netcoreapp3.1\PizzaBox.client.pdb
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.csprojAssemblyReference.cache
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.AssemblyInfoInputs.cache
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.AssemblyInfo.cs
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.csproj.CoreCompileInputs.cache
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.dll
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.pdb
+c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.genruntimeconfig.cache
