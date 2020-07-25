@@ -1,8 +1,9 @@
+using System;
+
 namespace PizzaBox.domain
 {
-    public class User
+    public class Topping
     {
         public string name {get; set;}
-
     }
 }

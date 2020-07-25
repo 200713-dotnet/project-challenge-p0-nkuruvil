@@ -1,6 +1,6 @@
 namespace PizzaBox.domain
 {
-    public class User
+    public class Size
     {
         public string name {get; set;}
 

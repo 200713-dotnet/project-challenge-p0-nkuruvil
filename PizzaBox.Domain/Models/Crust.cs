@@ -1,8 +1,8 @@
+using System;
 namespace PizzaBox.domain
 {
-    public class User
+    public class Crust
     {
         public string name {get; set;}
-
     }
 }
