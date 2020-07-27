@@ -8,5 +8,9 @@ namespace PizzaBox.domain
         public Topping[] toppings {get; set;}
 
 
+        public Pizza(){
+            
+        }
+
     }
 }
