@@ -14,7 +14,7 @@ namespace PizzaBox.client
             {
                 Crust = new Crust() {Name = "NY Style"},
                 Size = new Size() {Name = "Medium"},
-                Toppings = new List<Topping>() = {new Topping(){Name = "Cheese"}}
+                Toppings = new List<Topping>(){new Topping(){Name = "Cheese"}}
             };
 
             pr.Create(pizza);
