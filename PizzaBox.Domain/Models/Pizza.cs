@@ -5,13 +5,20 @@ using System.Text;
 namespace PizzaBox.domain
 {
     public class Pizza{
-        public Crust crust {get; set;}
-        public Size size {get; set;}
-        public Topping[] toppings {get; set;}
+        public Crust Crust {get; set;}
+        public Size Size {get; set;}
+        public Topping[] Toppings {get; set;}
 
 
         public Pizza(){
-            toppings = new Topping[5];
+            Toppings = new Topping[5];
+        }
+
+        public Pizza(Crust crust, Size size, Topping[] toppings)
+        {
+            Crust = crust;
+            Size = size;
+            Toppings.AddRange(toppings);
         }
 
         public override string ToString(){

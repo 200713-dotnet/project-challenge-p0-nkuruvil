@@ -41,5 +41,10 @@ namespace PizzaBox.client
         {
 
         }
+
+        static void Menu()
+        {
+            
+        }
     }
 }

@@ -25,7 +25,18 @@ namespace PizzaBox.Storing.Repositories
         }
         
         public List<domain.Pizza> ReadAll(){
+
+            // eager-loading
+            // lazy-loading
+
             var domainPizzaList = new List<domain.Pizza>();
+
+            var query = from p in _db.Pizza
+                        select p;
+
+            var pizzas = _db.Pizza;
+            //var pizzaWithCrust = _db.Pizza.Include(this => this.Crust).Include()
+
             foreach(var item in _db.Pizza.ToList())
             {
                 domainPizzaList.Add(new domain.Pizza(){
