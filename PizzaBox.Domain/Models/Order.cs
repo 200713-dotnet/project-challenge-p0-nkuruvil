@@ -8,6 +8,15 @@ namespace PizzaBox.domain
         public List<Pizza> Pizzas {get; set;}
         public DateTime DateOrdered {get; set;}
 
+        public Store Store {get; set;}
+        public User User {get; set;}
+
+        public Order(Store store, User user){
+            Store = store;
+            User = user;
+            Pizzas = new List<Pizza>();
+        }
+
         public void createPizza(){
             Pizzas.Add(new Pizza());
         }
@@ -17,7 +26,7 @@ namespace PizzaBox.domain
             Pizzas.Add(pizza);
         }
 
-        public override string ToString()
+        public string ShowCart()
         {
             var sb = new StringBuilder();
             int count = 0;
