@@ -6223,24 +6223,26 @@
     ]
   },
   "packageFolders": {
-    "/home/nkuruvilla/.nuget/packages/": {}
+    "C:\\Users\\ekuru\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Domain/PizzaBox.Domain.csproj",
+      "projectUniqueName": "c:\\Users\\ekuru\\2007_13_dotnet\\project_challenges\\p0\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
       "projectName": "PizzaBox.Domain",
-      "projectPath": "/mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Domain/PizzaBox.Domain.csproj",
-      "packagesPath": "/home/nkuruvilla/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Domain/obj/",
+      "projectPath": "c:\\Users\\ekuru\\2007_13_dotnet\\project_challenges\\p0\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
+      "packagesPath": "C:\\Users\\ekuru\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\ekuru\\2007_13_dotnet\\project_challenges\\p0\\PizzaBox.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nkuruvilla/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ekuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6284,7 +6286,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

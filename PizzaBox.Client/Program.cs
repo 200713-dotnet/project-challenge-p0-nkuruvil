@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Models;
-using PizzaBox.Storing.Repositories;
+//using PizzaBox.Storing.Repositories;
 
 namespace PizzaBox.client
 {
@@ -9,7 +9,7 @@ namespace PizzaBox.client
     {
         static void Main(string[] args)
         {
-            var pr = new PizzaRepository();
+            //var pr = new PizzaRepository();
             var pizza = new Pizza()
             {
                 Crust = new Crust() {Name = "NY Style"},

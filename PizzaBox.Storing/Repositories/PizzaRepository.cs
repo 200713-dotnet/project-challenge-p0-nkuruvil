@@ -6,7 +6,7 @@ namespace PizzaBox.Storing.Repositories
     public class PizzaRepository
     {
 
-        private PizzaBoxDbContext _db = new PizzaBoxDbContext();
+        //private PizzaBoxDbContext _db = new PizzaBoxDbContext();
 
         public void Create(domain.Pizza pizza){
             var newPizza = new Pizza();
@@ -19,12 +19,12 @@ namespace PizzaBox.Storing.Repositories
             //newPizza.Active = false;
             //newPizza.UserModified = Indentity
 
-            _db.Pizza.Add(newPizza); //git add
-            _db.SaveChanges(); //git commit
+            //_db.Pizza.Add(newPizza); //git add
+            //_db.SaveChanges(); //git commit
 
         }
         
-        public List<domain.Pizza> ReadAll(){
+        /*public List<domain.Pizza> ReadAll(){
 
             // eager-loading
             // lazy-loading
@@ -47,7 +47,7 @@ namespace PizzaBox.Storing.Repositories
                 });
             }
             return domainPizzaList; //
-        }
+        }*/
 
         public void Update(){
 

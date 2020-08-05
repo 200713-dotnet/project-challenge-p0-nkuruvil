@@ -4,10 +4,7 @@ namespace PizzaBox.domain
 {
     public class Topping
     {
-        public string name {get; set;}
+        public string Name {get; set;}
 
-        public Topping(String n){
-            name = n;
-        }
     }
 }

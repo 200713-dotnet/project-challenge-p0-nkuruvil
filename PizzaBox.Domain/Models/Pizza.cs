@@ -7,11 +7,11 @@ namespace PizzaBox.domain
     public class Pizza{
         public Crust Crust {get; set;}
         public Size Size {get; set;}
-        public Topping[] Toppings {get; set;}
+        public List<Topping> Toppings {get; set;}
 
 
         public Pizza(){
-            Toppings = new Topping[5];
+            Toppings = new List<Topping>();
         }
 
         public Pizza(Crust crust, Size size, Topping[] toppings)
@@ -24,12 +24,12 @@ namespace PizzaBox.domain
         public override string ToString(){
             var sb = new StringBuilder();
             //string toppingsList = "{";
-            foreach(Topping t in toppings){
-                sb.Append(t.name + ", ");
+            foreach(Topping t in Toppings){
+                sb.Append(t.Name + ",");
             }
             //toppingsList = toppingsList.Substring(0, toppingsList.Length-2);
             //toppingsList += "}";
-            string pizzaString = $"Size={size}; Crust={crust}; Toppings={sb}";
+            string pizzaString = $"Size={Size.Name}; Crust={Crust.Name}; Toppings={sb}";
             return pizzaString;
 
         }
