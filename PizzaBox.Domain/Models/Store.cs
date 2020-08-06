@@ -29,6 +29,17 @@ namespace PizzaBox.domain
             string orderstring = $"{sb}";
             Console.Write(orderstring);
         }
+
+        public string listOrders()
+        {
+            var sb = new StringBuilder();
+            int count = 0;
+            foreach(Order o in Orders){
+                sb.Append(count + $"{o.Pizzas.Count} Pizzas");
+            }
+            return $"{sb}";
+        }
+
     }
     
 }
