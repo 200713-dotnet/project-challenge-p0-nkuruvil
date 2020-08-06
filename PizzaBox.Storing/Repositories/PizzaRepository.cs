@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using domain = PizzaBox.Domain.Models;
+using domain = PizzaBox.domain ;
 
 namespace PizzaBox.Storing.Repositories
 {
@@ -9,11 +9,10 @@ namespace PizzaBox.Storing.Repositories
         //private PizzaBoxDbContext _db = new PizzaBoxDbContext();
 
         public void Create(domain.Pizza pizza){
-            var newPizza = new Pizza();
+            var newPizza = new domain.Pizza();
 
-            newPizza.Crust = new Crust() { Name = pizza.Crust.Name};
-            newPizza.Size = new Size() { Name = pizza.Size.Name};
-            newPizza.Name = pizza.Name;
+            newPizza.Crust = new domain.Crust() { Name = pizza.Crust.Name};
+            newPizza.Size = new domain.Size() { Name = pizza.Size.Name};
             var orderDate = System.DateTime.UtcNow;
             //newPizza.DateModified = DateTime.Now;
             //newPizza.Active = false;
