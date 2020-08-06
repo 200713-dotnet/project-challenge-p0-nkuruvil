@@ -62,5 +62,5 @@ c:/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.client/obj/Debug/ne
 /mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Client/obj/Debug/netcoreapp3.1/PizzaBox.Client.dll
 /mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Client/obj/Debug/netcoreapp3.1/PizzaBox.Client.pdb
 /mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Client/obj/Debug/netcoreapp3.1/PizzaBox.Client.genruntimeconfig.cache
-c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.dll
-c:\Users\ekuru\2007_13_dotnet\project_challenges\p0\PizzaBox.client\obj\Debug\netcoreapp3.1\PizzaBox.client.pdb
+/mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Client/bin/Debug/netcoreapp3.1/PizzaBox.Storing.dll
+/mnt/c/Users/ekuru/2007_13_dotnet/project_challenges/p0/PizzaBox.Client/bin/Debug/netcoreapp3.1/PizzaBox.Storing.pdb

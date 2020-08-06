@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using PizzaBox.Client;
 using PizzaBox.domain;
-using PizzaBox.client;
 //using PizzaBox.Storing.Repositories;
 
 namespace PizzaBox.client
@@ -15,7 +15,7 @@ namespace PizzaBox.client
             {
                 Crust = new Crust() {Name = "NY Style"},
                 Size = new Size() {Name = "Medium"},
-                Toppings = new List<Topping>(){new Topping(){Name = "Cheese"}}
+                Toppings = new List<Topping>(){new Topping("Cheese")}
             };
 
 
@@ -34,7 +34,7 @@ namespace PizzaBox.client
             var store = new Store();
             do{
                 Console.WriteLine("Hello User!");
-                Console.WriteLine("Select 1 for user or 2 for store");
+                Console.WriteLine("Select 1 for user, 2 for store, 0 to exit");
                 int.TryParse(Console.ReadLine(), out select);
                 if(select == 1){
                     Order order = new Order(store, user);
@@ -42,9 +42,11 @@ namespace PizzaBox.client
 
                 }else if(select == 2){
 
+                }else if(select == 0){
+                    Console.WriteLine("Thank you for using");
                 }else{
                     Console.WriteLine("Invalid Number, please try again");
-                    select = 0;
+                    select = -1;
                 }
 
 
@@ -98,42 +100,57 @@ namespace PizzaBox.client
                         int select = 0; 
                         int.TryParse(Console.ReadLine(), out select);
 
+                        Crust crust = new Crust();
+                        crust.Name = "Stuffed";
+                        Size size = new Size();
+                        size.Name = "L";
+                        size.Value = 12;
+                        List<Topping> toppings = new List<Topping>();
+
                         switch(select)
                         {
                             case 1:
                                 //var p = startup.CreatePizza("L","Stuffed", new List<string>{"Cheese"});
                                 //cart.Add(p);
-                                order.CreatePizza("L","Stuffed", new List<string>{"Cheese"});
+                                toppings.Add(new Topping("Cheese"));
                                 System.Console.WriteLine("Added Cheese Pizza");
                                 break;
                             case 2:
-                                order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni"});
+                                toppings.Add(new Topping("Pepperoni"));
                                 System.Console.WriteLine("Added Pepperoni Pizza");
                                 break;
                             case 3:
-                                order.CreatePizza("L","Stuffed", new List<string>{"Sausage"});
+                                toppings.Add(new Topping("Sausage"));
                                 System.Console.WriteLine("Added Sausage Pizza");
                                 break;
                             case 4:
-                                order.CreatePizza("L","Stuffed", new List<string>{"Tomato", "Olive","Green Peppers","Onion"});
+                                toppings.Add(new Topping("Tomato"));
+                                toppings.Add(new Topping("Olive"));
                                 System.Console.WriteLine("Added Vegetarian Pizza");
                                 break;
                             case 5:
-                                order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni","Sausage","Green Peppers","Onions"});
+                                toppings.Add(new Topping("Pepperoni"));
+                                toppings.Add(new Topping("Sausage"));
+                                toppings.Add(new Topping("Green Pepper"));
+                                toppings.Add(new Topping("Onion"));
+                                //order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni","Sausage","Green Peppers","Onions"});
                                 System.Console.WriteLine("Added Supreme Pizza");
                                 break;
                             case 6:
-                                order.CreatePizza("L","Stuffed", new List<string>{"Custom"});
-                                System.Console.WriteLine("Added Custom Pizza");
+                                //order.CreatePizza("L","Stuffed", new List<string>{"Custom"});
+                                toppings.Add(new Topping("cheese"));
+                                System.Console.WriteLine("Added Custom Pizza: To be implemented");
                                 break;
                             case 7:
-                                Console.WriteLine(cart.ShowCart());
+                                Console.WriteLine(order.ShowCart());
                                 break;
                             case 8:
                                 exit = true;
+                                break;
                         }
                         System.Console.WriteLine("");
                     if (select < 7){
+                        order.addPizza(startup.createPizza(crust, size, toppings));
                         numPizzas++;
                     }
 

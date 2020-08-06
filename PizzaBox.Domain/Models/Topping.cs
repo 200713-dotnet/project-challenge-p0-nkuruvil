@@ -6,5 +6,9 @@ namespace PizzaBox.domain
     {
         public string Name {get; set;}
 
+        public Topping(string name){
+            Name = name;
+        }
+
     }
 }

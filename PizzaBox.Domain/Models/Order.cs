@@ -32,6 +32,7 @@ namespace PizzaBox.domain
             int count = 0;
             foreach(Pizza p in Pizzas){
                 sb.Append(count + ":{" + p + "};");
+                count++;
             }
             string orderstring = $"{sb}";
             return orderstring;
