@@ -9,6 +9,11 @@ namespace PizzaBox.domain
         public List<Order> Orders {get; set;}
         public string Name {get; set;}
 
+        public Store()
+        {
+            Orders = new List<Order>();
+        }
+
         public void addOrder(Order order)
         {
             Orders.Add(order);
