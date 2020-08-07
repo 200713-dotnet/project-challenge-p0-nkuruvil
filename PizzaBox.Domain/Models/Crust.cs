@@ -1,5 +1,5 @@
 using System;
-namespace PizzaBox.domain
+namespace PizzaBox.Domain
 {
     public class Crust
     {

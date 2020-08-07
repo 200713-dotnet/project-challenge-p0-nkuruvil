@@ -1,4 +1,4 @@
-namespace PizzaBox.domain
+namespace PizzaBox.Domain
 {
     public class Size
     {

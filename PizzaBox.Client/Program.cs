@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PizzaBox.Client;
-using PizzaBox.domain;
+using PizzaBox.Domain;
 //using PizzaBox.Storing.Repositories;
 
 namespace PizzaBox.client
@@ -39,9 +39,11 @@ namespace PizzaBox.client
                 if(select == 1){
                     Order order = new Order(store, user);
                     Menu(order);
-
+                    store.addOrder(order);
+                    user.addOrder(order);
+                    order.DateOrdered = DateTime.UtcNow;
                 }else if(select == 2){
-
+                    StoreExperience(store);
                 }else if(select == 0){
                     Console.WriteLine("Thank you for using");
                 }else{
@@ -60,9 +62,31 @@ namespace PizzaBox.client
 
         }
 
-        static void StoreExperience()
+        static void StoreExperience(Store store)
         {
+            Console.WriteLine("Store management. Select Option");
 
+            Boolean exit = false;
+
+            do{
+                Console.WriteLine("1. View Store Orders");
+                Console.WriteLine("2. Exit");
+
+                int select = 0; 
+                int.TryParse(Console.ReadLine(), out select);
+
+                switch(select){
+                    case 1:
+                        Console.WriteLine("Order History");
+                        Console.WriteLine(store.listOrders());
+                        break;
+                    case 2:
+                        Console.WriteLine("Check complete");
+                        exit = true;
+                        break;
+                }
+
+            }while(!exit);
         }
 
         static void Menu(Order order)

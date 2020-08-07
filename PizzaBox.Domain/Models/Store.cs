@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PizzaBox.domain
+namespace PizzaBox.Domain
 {
 
     public class Store{
@@ -35,7 +35,7 @@ namespace PizzaBox.domain
             var sb = new StringBuilder();
             int count = 0;
             foreach(Order o in Orders){
-                sb.Append(count + $"{o.Pizzas.Count} Pizzas");
+                sb.Append(count + $"{o.Pizzas.Count} Pizzas, {o.DateOrdered}; ");
             }
             return $"{sb}";
         }

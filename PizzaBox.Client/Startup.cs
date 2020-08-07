@@ -8,7 +8,9 @@ namespace PizzaBox.Client{
 
         public Order startOrder(User user, Store store) {
             Order o = new Order(store, user);
-            user.AddOrder(o);
+            user.addOrder(o);
+            store.addOrder(o);
+            return o;
 
         }
         public Pizza createPizza(Crust crust, Size size, List<Topping> toppings) {

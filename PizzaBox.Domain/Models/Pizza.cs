@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PizzaBox.domain
+namespace PizzaBox.Domain
 {
     public class Pizza{
         public Crust Crust {get; set;}

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using domain = PizzaBox.domain ;
+using domain = PizzaBox.Domain;
 
 namespace PizzaBox.Storing.Repositories
 {
