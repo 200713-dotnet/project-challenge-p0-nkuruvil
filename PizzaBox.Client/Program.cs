@@ -109,6 +109,60 @@ namespace PizzaBox.client
             {
 
                 // if
+
+                        //Select Crust
+                        System.Console.WriteLine("Select Crust");
+                        System.Console.WriteLine("Select 1 for Pan");
+                        System.Console.WriteLine("Select 2 for Thin-Crust");
+                        System.Console.WriteLine("Select 3 for Stuffed");
+                        Crust crust = new Crust();
+                        int select = 0; 
+                        int.TryParse(Console.ReadLine(), out select);
+                        switch(select){
+                            case 1:
+                                crust.Name = "Pan";
+                                break;
+                            case 2:
+                                crust.Name = "Thin-Crust";
+                                break;
+                            case 3:
+                                crust.Name = "Stuffed";
+                                break;
+                            default:
+                                crust.Name = "Pan";
+                                break;
+                        }
+                        
+
+                        //Select Size
+                        System.Console.WriteLine("Select Size");
+                        System.Console.WriteLine("Select 1 for Small");
+                        System.Console.WriteLine("Select 2 for Medium");
+                        System.Console.WriteLine("Select 3 for Large");
+                        Size size = new Size();
+                        select = 0; 
+                        int.TryParse(Console.ReadLine(), out select);
+                        switch(select){
+                            case 1:
+                                size.Name = "S";
+                                size.Value = 6;
+                                break;
+                            case 2:
+                                size.Name = "M";
+                                size.Value = 10;
+                                break;
+                            case 3:
+                                size.Name = "L";
+                                size.Value = 12;
+                                break;
+                            default:
+                                crust.Name = "Pan";
+                                break;
+                        }
+
+
+                        List<Topping> toppings = new List<Topping>();
+
                         System.Console.WriteLine("Select Toppings");
                         System.Console.WriteLine("Select 1 for Cheese Pizza");
                         System.Console.WriteLine("Select 2 for Pepperoni Pizza");
@@ -121,15 +175,8 @@ namespace PizzaBox.client
                         System.Console.WriteLine("Select 9 to read pizza file");
                         System.Console.WriteLine();
 
-                        int select = 0; 
+                        select = 0; 
                         int.TryParse(Console.ReadLine(), out select);
-
-                        Crust crust = new Crust();
-                        crust.Name = "Stuffed";
-                        Size size = new Size();
-                        size.Name = "L";
-                        size.Value = 12;
-                        List<Topping> toppings = new List<Topping>();
 
                         switch(select)
                         {
