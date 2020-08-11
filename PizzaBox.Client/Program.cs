@@ -108,126 +108,180 @@ namespace PizzaBox.client
             do
             {
 
-                // if
+                //Select Toppings
+                List<Topping> toppings = new List<Topping>();
 
-                        //Select Crust
-                        System.Console.WriteLine("Select Crust");
-                        System.Console.WriteLine("Select 1 for Pan");
-                        System.Console.WriteLine("Select 2 for Thin-Crust");
-                        System.Console.WriteLine("Select 3 for Stuffed");
-                        Crust crust = new Crust();
-                        int select = 0; 
-                        int.TryParse(Console.ReadLine(), out select);
-                        switch(select){
-                            case 1:
-                                crust.Name = "Pan";
-                                break;
-                            case 2:
-                                crust.Name = "Thin-Crust";
-                                break;
-                            case 3:
-                                crust.Name = "Stuffed";
-                                break;
-                            default:
-                                crust.Name = "Pan";
-                                break;
-                        }
-                        
+                System.Console.WriteLine("Select Toppings");
+                System.Console.WriteLine("Select 1 for Cheese Pizza");
+                System.Console.WriteLine("Select 2 for Pepperoni Pizza");
+                System.Console.WriteLine("Select 3 for Sausage Pizza");
+                System.Console.WriteLine("Select 4 for Vegetarian Pizza");
+                System.Console.WriteLine("Select 5 for Supreme Pizza");
+                System.Console.WriteLine("Select 6 for Custom Pizza");
+                System.Console.WriteLine("Select 7 to see cart");
+                System.Console.WriteLine("Select 8 for Exit Pizza");
+                System.Console.WriteLine("Select 9 to read pizza file");
+                System.Console.WriteLine();
 
-                        //Select Size
-                        System.Console.WriteLine("Select Size");
-                        System.Console.WriteLine("Select 1 for Small");
-                        System.Console.WriteLine("Select 2 for Medium");
-                        System.Console.WriteLine("Select 3 for Large");
-                        Size size = new Size();
-                        select = 0; 
-                        int.TryParse(Console.ReadLine(), out select);
-                        switch(select){
-                            case 1:
-                                size.Name = "S";
-                                size.Value = 6;
-                                break;
-                            case 2:
-                                size.Name = "M";
-                                size.Value = 10;
-                                break;
-                            case 3:
-                                size.Name = "L";
-                                size.Value = 12;
-                                break;
-                            default:
-                                crust.Name = "Pan";
-                                break;
-                        }
+                int select = 0; 
+                int.TryParse(Console.ReadLine(), out select);
 
+                switch(select)
+                {
+                    case 1:
+                    //var p = startup.CreatePizza("L","Stuffed", new List<string>{"Cheese"});
+                    //cart.Add(p);
+                        toppings.Add(new Topping("Cheese"));
+                        System.Console.WriteLine("Added Cheese Pizza");
+                        break;
+                    case 2:
+                        toppings.Add(new Topping("Pepperoni"));
+                        System.Console.WriteLine("Added Pepperoni Pizza");
+                        break;
+                    case 3:
+                        toppings.Add(new Topping("Sausage"));
+                        System.Console.WriteLine("Added Sausage Pizza");
+                        break;
+                    case 4:
+                        toppings.Add(new Topping("Tomato"));
+                        toppings.Add(new Topping("Olive"));
+                        System.Console.WriteLine("Added Vegetarian Pizza");
+                        break;
+                    case 5:
+                        toppings.Add(new Topping("Pepperoni"));
+                        toppings.Add(new Topping("Sausage"));
+                        toppings.Add(new Topping("Green Pepper"));
+                        toppings.Add(new Topping("Onion"));
+                        //order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni","Sausage","Green Peppers","Onions"});
+                        System.Console.WriteLine("Added Supreme Pizza");
+                        break;
+                    case 6:
+                        //order.CreatePizza("L","Stuffed", new List<string>{"Custom"});
+                        //toppings.Add(new Topping("cheese"));
+                        //System.Console.WriteLine("Added Custom Pizza: To be implemented");
+                        CustomPizzaToppings(toppings);
+                        break;
+                    case 7:
+                        Console.WriteLine(order.ShowCart());
+                        break;
+                    default:
+                        exit = true;
+                        break;
+                }
+                System.Console.WriteLine("");
+                if (select > 6){
+                    continue;
+                }
 
-                        List<Topping> toppings = new List<Topping>();
+                //Select Crust
+                System.Console.WriteLine("Select Crust");
+                System.Console.WriteLine("Select 1 for Pan");
+                System.Console.WriteLine("Select 2 for Thin-Crust");
+                System.Console.WriteLine("Select 3 for Stuffed");
+                Crust crust = new Crust();
+                select = 0; 
+                int.TryParse(Console.ReadLine(), out select);
+                switch(select){
+                    case 1:
+                        crust.Name = "Pan";
+                        break;
+                    case 2:
+                        crust.Name = "Thin-Crust";
+                        break;
+                    case 3:
+                        crust.Name = "Stuffed";
+                        break;
+                    default:
+                        crust.Name = "Pan";
+                        break;
+                }
+                System.Console.WriteLine("");        
 
-                        System.Console.WriteLine("Select Toppings");
-                        System.Console.WriteLine("Select 1 for Cheese Pizza");
-                        System.Console.WriteLine("Select 2 for Pepperoni Pizza");
-                        System.Console.WriteLine("Select 3 for Sausage Pizza");
-                        System.Console.WriteLine("Select 4 for Vegetarian Pizza");
-                        System.Console.WriteLine("Select 5 for Supreme Pizza");
-                        System.Console.WriteLine("Select 6 for Custom Pizza");
-                        System.Console.WriteLine("Select 7 to see cart");
-                        System.Console.WriteLine("Select 8 for Exit Pizza");
-                        System.Console.WriteLine("Select 9 to read pizza file");
-                        System.Console.WriteLine();
+                //Select Size
+                System.Console.WriteLine("Select Size");
+                System.Console.WriteLine("Select 1 for Small");
+                System.Console.WriteLine("Select 2 for Medium");
+                System.Console.WriteLine("Select 3 for Large");
+                Size size = new Size();
+                select = 0; 
+                int.TryParse(Console.ReadLine(), out select);
+                switch(select){
+                    case 1:
+                        size.Name = "S";
+                        size.Value = 6;
+                        break;
+                    case 2:
+                        size.Name = "M";
+                        size.Value = 10;
+                        break;
+                    case 3:
+                        size.Name = "L";
+                        size.Value = 12;
+                        break;
+                    default:
+                        crust.Name = "L";
+                        size.Value = 12;
+                        break;
+                }
+                System.Console.WriteLine("");
 
-                        select = 0; 
-                        int.TryParse(Console.ReadLine(), out select);
-
-                        switch(select)
-                        {
-                            case 1:
-                                //var p = startup.CreatePizza("L","Stuffed", new List<string>{"Cheese"});
-                                //cart.Add(p);
-                                toppings.Add(new Topping("Cheese"));
-                                System.Console.WriteLine("Added Cheese Pizza");
-                                break;
-                            case 2:
-                                toppings.Add(new Topping("Pepperoni"));
-                                System.Console.WriteLine("Added Pepperoni Pizza");
-                                break;
-                            case 3:
-                                toppings.Add(new Topping("Sausage"));
-                                System.Console.WriteLine("Added Sausage Pizza");
-                                break;
-                            case 4:
-                                toppings.Add(new Topping("Tomato"));
-                                toppings.Add(new Topping("Olive"));
-                                System.Console.WriteLine("Added Vegetarian Pizza");
-                                break;
-                            case 5:
-                                toppings.Add(new Topping("Pepperoni"));
-                                toppings.Add(new Topping("Sausage"));
-                                toppings.Add(new Topping("Green Pepper"));
-                                toppings.Add(new Topping("Onion"));
-                                //order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni","Sausage","Green Peppers","Onions"});
-                                System.Console.WriteLine("Added Supreme Pizza");
-                                break;
-                            case 6:
-                                //order.CreatePizza("L","Stuffed", new List<string>{"Custom"});
-                                toppings.Add(new Topping("cheese"));
-                                System.Console.WriteLine("Added Custom Pizza: To be implemented");
-                                break;
-                            case 7:
-                                Console.WriteLine(order.ShowCart());
-                                break;
-                            case 8:
-                                exit = true;
-                                break;
-                        }
-                        System.Console.WriteLine("");
-                    if (select < 7){
-                        order.addPizza(startup.createPizza(crust, size, toppings));
-                        numPizzas++;
-                    }
+                order.addPizza(startup.createPizza(crust, size, toppings));
+                numPizzas++;
 
             }while(!exit);
             System.Console.WriteLine($"Thank you for ordering {numPizzas} pizzas");
             Console.WriteLine(order.ShowCart());
+        }
+
+        static void CustomPizzaToppings(List<Topping> toppings){
+            int numToppings = 0;
+            do{
+                System.Console.WriteLine("Select Topping");
+                System.Console.WriteLine("1. Pepperoni");
+                System.Console.WriteLine("2. Sausage");
+                System.Console.WriteLine("3. Green Peppers");
+                System.Console.WriteLine("4. Jalepeno");
+                System.Console.WriteLine("5. Pinapple");
+                System.Console.WriteLine("6. Olives");
+                System.Console.WriteLine("7. Break");
+
+                int select = 0; 
+                int.TryParse(Console.ReadLine(), out select);
+
+
+                switch(select){
+                    case 1:
+                        toppings.Add(new Topping("Pepperoni"));
+                        numToppings++;
+                        break;
+                    case 2:
+                        toppings.Add(new Topping("Sausage"));
+                        numToppings++;
+                        break;
+                    case 3:
+                        toppings.Add(new Topping("Green Peppers"));
+                        numToppings++;
+                        break;
+                    case 4:
+                        toppings.Add(new Topping("Jalepeno"));
+                        numToppings++;
+                        break;
+                    case 5:
+                        toppings.Add(new Topping("Pinapple"));
+                        numToppings++;
+                        break;
+                    case 6:
+                        toppings.Add(new Topping("Olives"));
+                        numToppings++;
+                        break;                     
+                    case 7:
+                        if(numToppings >= 2){
+                            numToppings = 5;
+                        }
+                        break;  
+                }
+
+            }while(numToppings < 5);
         }
 
 
