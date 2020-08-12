@@ -256,7 +256,8 @@ namespace PizzaBox.client
                 System.Console.WriteLine("4. Jalepeno");
                 System.Console.WriteLine("5. Pinapple");
                 System.Console.WriteLine("6. Olives");
-                System.Console.WriteLine("7. Break");
+                System.Console.WriteLine("7. Review Toppings");
+                System.Console.WriteLine("8. Break");
 
                 int select = 0; 
                 int.TryParse(Console.ReadLine(), out select);
@@ -280,10 +281,19 @@ namespace PizzaBox.client
                         break;
                     case 6:
                         startup1.AddToppings(toppings, new Topping("Olives"));
-                        break;                     
+                        break;
                     case 7:
+                        System.Console.WriteLine("Reviewing toppings");
+                        foreach(Topping t in toppings){
+                            System.Console.WriteLine($" {t.Name}");
+                        }
+                        System.Console.WriteLine(" ");
+                        break;
+                    case 8:
                         if(toppings.Count >= 2){
                             canExit = true;
+                        }else{
+                            System.Console.WriteLine("Need at least 2 toppings");
                         }
                         break;  
                 }
