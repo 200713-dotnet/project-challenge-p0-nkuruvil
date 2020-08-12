@@ -20,5 +20,15 @@ namespace PizzaBox.Client{
             p.Toppings.AddRange(toppings);
             return p;
         }
+
+        public void AddToppings(List<Topping> toppings, Topping topping) {
+            foreach(Topping t in toppings) {
+                if (t.isEqual(topping)) {
+                    return;
+                }
+            }
+            toppings.Add(topping);
+        }
+
     }
 }

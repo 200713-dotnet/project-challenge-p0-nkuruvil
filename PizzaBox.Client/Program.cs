@@ -8,6 +8,7 @@ namespace PizzaBox.client
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             //var pr = new PizzaRepository();
@@ -96,6 +97,8 @@ namespace PizzaBox.client
                 throw new ArgumentNullException(nameof(order));
             }
 
+            Startup su = new Startup();
+
             int numPizzas = 0;
             bool exit = false;
             var startup = new Startup();
@@ -107,6 +110,7 @@ namespace PizzaBox.client
 
             do
             {
+
 
                 //Select Toppings
                 List<Topping> toppings = new List<Topping>();
@@ -131,27 +135,36 @@ namespace PizzaBox.client
                     case 1:
                     //var p = startup.CreatePizza("L","Stuffed", new List<string>{"Cheese"});
                     //cart.Add(p);
-                        toppings.Add(new Topping("Cheese"));
+                        //toppings.Add(new Topping("Cheese"));
+                        su.AddToppings(toppings, new Topping("Cheese"));
                         System.Console.WriteLine("Added Cheese Pizza");
                         break;
                     case 2:
-                        toppings.Add(new Topping("Pepperoni"));
+                        //toppings.Add(new Topping("Pepperoni"));
+                        su.AddToppings(toppings, new Topping("Pepperoni"));
                         System.Console.WriteLine("Added Pepperoni Pizza");
                         break;
                     case 3:
-                        toppings.Add(new Topping("Sausage"));
+                        //toppings.Add(new Topping("Sausage"));
+                        su.AddToppings(toppings, new Topping("Sausage"));
                         System.Console.WriteLine("Added Sausage Pizza");
                         break;
                     case 4:
-                        toppings.Add(new Topping("Tomato"));
-                        toppings.Add(new Topping("Olive"));
+                        //toppings.Add(new Topping("Tomato"));
+                        //toppings.Add(new Topping("Olive"));
+                        su.AddToppings(toppings, new Topping("Tomato"));
+                        su.AddToppings(toppings, new Topping("Olive"));
                         System.Console.WriteLine("Added Vegetarian Pizza");
                         break;
                     case 5:
-                        toppings.Add(new Topping("Pepperoni"));
-                        toppings.Add(new Topping("Sausage"));
-                        toppings.Add(new Topping("Green Pepper"));
-                        toppings.Add(new Topping("Onion"));
+                        //toppings.Add(new Topping("Pepperoni"));
+                        //toppings.Add(new Topping("Sausage"));
+                        //toppings.Add(new Topping("Green Pepper"));
+                        //toppings.Add(new Topping("Onion"));
+                        su.AddToppings(toppings, new Topping("Pepperoni"));
+                        su.AddToppings(toppings, new Topping("Sausage"));
+                        su.AddToppings(toppings, new Topping("Green Pepper"));
+                        su.AddToppings(toppings, new Topping("Onion"));
                         //order.CreatePizza("L","Stuffed", new List<string>{"Pepperoni","Sausage","Green Peppers","Onions"});
                         System.Console.WriteLine("Added Supreme Pizza");
                         break;
@@ -159,7 +172,7 @@ namespace PizzaBox.client
                         //order.CreatePizza("L","Stuffed", new List<string>{"Custom"});
                         //toppings.Add(new Topping("cheese"));
                         //System.Console.WriteLine("Added Custom Pizza: To be implemented");
-                        CustomPizzaToppings(toppings);
+                        CustomPizzaToppings(toppings, su);
                         break;
                     case 7:
                         Console.WriteLine(order.ShowCart());
@@ -233,8 +246,8 @@ namespace PizzaBox.client
             Console.WriteLine(order.ShowCart());
         }
 
-        static void CustomPizzaToppings(List<Topping> toppings){
-            int numToppings = 0;
+        static void CustomPizzaToppings(List<Topping> toppings, Startup startup1){
+            bool canExit = false;
             do{
                 System.Console.WriteLine("Select Topping");
                 System.Console.WriteLine("1. Pepperoni");
@@ -251,37 +264,34 @@ namespace PizzaBox.client
 
                 switch(select){
                     case 1:
-                        toppings.Add(new Topping("Pepperoni"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Pepperoni"));
                         break;
                     case 2:
-                        toppings.Add(new Topping("Sausage"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Sausage"));
                         break;
                     case 3:
-                        toppings.Add(new Topping("Green Peppers"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Green Peppers"));
                         break;
                     case 4:
-                        toppings.Add(new Topping("Jalepeno"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Jalepeno"));
                         break;
                     case 5:
-                        toppings.Add(new Topping("Pinapple"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Pinapple"));
                         break;
                     case 6:
-                        toppings.Add(new Topping("Olives"));
-                        numToppings++;
+                        startup1.AddToppings(toppings, new Topping("Olives"));
                         break;                     
                     case 7:
-                        if(numToppings >= 2){
-                            numToppings = 5;
+                        if(toppings.Count >= 2){
+                            canExit = true;
                         }
                         break;  
                 }
+                if(toppings.Count == 5) {
+                    canExit = true;
+                }
 
-            }while(numToppings < 5);
+            }while(!canExit);
         }
 
 

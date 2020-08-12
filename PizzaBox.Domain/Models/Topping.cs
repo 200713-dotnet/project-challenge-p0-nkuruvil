@@ -10,5 +10,13 @@ namespace PizzaBox.Domain
             Name = name;
         }
 
+        public bool isEqual(Topping t) {
+            if(t == null) {
+                return false;
+            } else {
+                return (Name == t.Name);
+            }
+        }
+
     }
 }
