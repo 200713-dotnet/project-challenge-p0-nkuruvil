@@ -9,6 +9,8 @@ namespace PizzaBox.client
     class Program
     {
 
+        public static Startup su = new Startup();
+
         static void Main(string[] args)
         {
             //var pr = new PizzaRepository();
@@ -97,7 +99,7 @@ namespace PizzaBox.client
                 throw new ArgumentNullException(nameof(order));
             }
 
-            Startup su = new Startup();
+            //Startup su = new Startup();
 
             int numPizzas = 0;
             bool exit = false;
