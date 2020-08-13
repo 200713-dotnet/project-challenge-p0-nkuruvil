@@ -30,5 +30,16 @@ namespace PizzaBox.Client{
             toppings.Add(topping);
         }
 
+        public Store SelectStore(Store store1, Store store2) {
+            System.Console.WriteLine("Pick store 1 or 2 to view");
+            int choice = 0;
+            int.TryParse(Console.ReadLine(), out choice);
+            if(choice == 2){
+                return store2;
+            }else{
+                return store1;
+            }
+        }
+
     }
 }

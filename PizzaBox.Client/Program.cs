@@ -34,18 +34,21 @@ namespace PizzaBox.client
             
             int select = 0;
             var user = new User();
-            var store = new Store();
+            var store1 = new Store();
+            var store2 = new Store();
             do{
                 Console.WriteLine("Hello User!");
                 Console.WriteLine("Select 1 for user, 2 for store, 0 to exit");
                 int.TryParse(Console.ReadLine(), out select);
                 if(select == 1){
+                    var store = su.SelectStore(store1, store2);
                     Order order = new Order(store, user);
                     Menu(order);
                     store.addOrder(order);
                     user.addOrder(order);
                     order.DateOrdered = DateTime.UtcNow;
                 }else if(select == 2){
+                    var store = su.SelectStore(store1, store2);
                     StoreExperience(store);
                 }else if(select == 0){
                     Console.WriteLine("Thank you for using");
