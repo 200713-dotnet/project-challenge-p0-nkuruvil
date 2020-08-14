@@ -34,8 +34,19 @@ namespace PizzaBox.Domain
                 sb.Append(count + ":{" + p + "};");
                 count++;
             }
-            string orderstring = $"{sb}";
+            string orderstring = $"{sb} cost:{getPrice()}";
             return orderstring;
         }
+
+        public double getPrice()
+        {
+            double amount = 0;
+            foreach(Pizza p in Pizzas) {
+                amount += p.getPrice();
+            }
+            return amount;
+        }
+
+
     }
 }

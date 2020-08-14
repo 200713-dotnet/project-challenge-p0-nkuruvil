@@ -33,5 +33,13 @@ namespace PizzaBox.Domain
             return pizzaString;
 
         }
+
+        public double getPrice()
+        {
+            double amount = 0;
+            amount += Size.Value;
+            amount += Toppings.Count * 0.5;
+            return amount;
+        }
     }
 }
