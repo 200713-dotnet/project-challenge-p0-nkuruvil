@@ -262,7 +262,8 @@ namespace PizzaBox.client
                 System.Console.WriteLine("5. Pinapple");
                 System.Console.WriteLine("6. Olives");
                 System.Console.WriteLine("7. Review Toppings");
-                System.Console.WriteLine("8. Break");
+                System.Console.WriteLine("8. Reset Toppings");
+                System.Console.WriteLine("9. Break");
 
                 int select = 0; 
                 int.TryParse(Console.ReadLine(), out select);
@@ -292,9 +293,12 @@ namespace PizzaBox.client
                         foreach(Topping t in toppings){
                             System.Console.WriteLine($" {t.Name}");
                         }
-                        System.Console.WriteLine(" ");
                         break;
                     case 8:
+                        System.Console.WriteLine("Resetting toppings");
+                        toppings.Clear();
+                        break;
+                    case 9:
                         if(toppings.Count >= 2){
                             canExit = true;
                         }else{
